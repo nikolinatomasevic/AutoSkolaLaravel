@@ -10,6 +10,13 @@ class AutoSkola extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'naziv',
+        'grad',
+        'cena_obuke',
+        'broj_vozila',
+    ];
+
     public function instruktori()
     {
         return $this->hasMany(Instruktor::class);

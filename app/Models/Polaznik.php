@@ -10,6 +10,14 @@ class Polaznik extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'ime',
+        'prezime',
+        'kategorija',
+        'teorija',
+        'instruktor_id',
+    ];
+
     public function instruktor()
     {
         return $this->belongsTo(Instruktor::class);

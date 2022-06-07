@@ -11,6 +11,13 @@ class Instruktor extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'ime',
+        'prezime',
+        'licenca',
+        'auto_skola_id',
+    ];
+
     public function autoSkola()
     {
         return $this->belongsTo(AutoSkola::class);
