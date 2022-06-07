@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\API\AutoSkolaKontroler;
+use App\Http\Controllers\PolaznikKontroler;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -19,7 +20,8 @@ Route::get('auto_skola', [AutoSkolaKontroler::class, 'index']);
 Route::get('auto_skola/{auto_skola}', [AutoSkolaKontroler::class, 'show']);
 Route::delete('auto_skola/{auto_skola}', [AutoSkolaKontroler::class, 'destroy']);
 Route::post('auto_skola', [AutoSkolaKontroler::class, 'store']);
-
+Route::get('polaznik', [PolaznikKontroler::class, 'index']);
+Route::delete('polaznik/{polaznik}', [PolaznikKontroler::class, 'destroy']);
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
